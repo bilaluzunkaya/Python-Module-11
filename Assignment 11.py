@@ -10,7 +10,9 @@ class Book(Publication):
     self.page_count = page_count
 
   def print_information(self):
-    print(self.name, self.author, self.page_count)
+    print(f"Book name: {self.name}")
+    print(f"Author: {self.author}")
+    print(f"Pages: {self.page_count}")
 
 
 class Magazine(Publication):
@@ -19,4 +21,15 @@ class Magazine(Publication):
     self.chief_editor = chief_editor
 
   def print_information(self):
-    print(self.name, self.chief_editor)
+    print(f"Magazine name: {self.name}")
+    print(f"Chief editor: {self.chief_editor}")
+
+
+
+if __name__ == "__main__":
+  magazine = Magazine("Donald Duck", "Aki Hyyppä")
+  book = Book("Compartment No. 6", "Rosa Liksom", 192)
+
+  magazine.print_information()
+  print()
+  book.print_information()
